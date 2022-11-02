@@ -1,0 +1,32 @@
+.col-md-6{
+   padding: 20px;
+    background: hsla(205,46%,30%,1);
+    background: linear-gradient(90deg,hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);
+}
+label{
+    color: #fff;
+
+}
+.row{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+.row h1{
+    text-align: center;
+}
+/* .row{
+    margin: 0;
+  width: 85vw;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+  place-items: center;
+  overflow: hidden;
+  font-family: poppins;
+  background: hsla(205,46%,30%,1);
+    background: linear-gradient(90deg,hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);
+} */

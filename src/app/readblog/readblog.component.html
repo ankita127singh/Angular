@@ -1,0 +1,24 @@
+<h1>Article View</h1>
+<div class="d-flex flex-row justify-content-center flex-wrap">
+    <div class="author d-flex flex-column justify-content-center" style="gap:10px;">
+        <div class="pic">
+            <img src="{{users[id].profile_pic}}" alt="" class="blog_read_profilepic rounded-circle mt-5" />
+        </div>
+        <div class="authorInfo">
+            <span class="authorname">
+            {{users[id].name}} 
+        </span>
+            <br>
+            <span class="authorword">
+            {{users[id].author_word}}
+        </span>
+        </div>
+    </div>
+    <div class="body d-flex flex-column" style="gap:10px;">
+        <div class="title">{{users[id].title}}</div>
+        <div class="date">{{users[id].date}}</div>
+        <div class="blogBody">
+            {{users[id].Article}}
+        </div>
+    </div>
+</div>

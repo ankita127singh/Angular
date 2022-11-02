@@ -1,0 +1,52 @@
+<h1 class="font-weight-bold">Blogs</h1>
+<!-- <table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+            <td>{{u.id}}</td>
+            <td>{{u.name}}</td>
+            <td>
+                <a routerLink="/details/{{u.id}}">
+                    <button class="btn btn-success">View</button>
+                </a>
+                &nbsp;
+                <button (click)="delete(u.id)" class="btn btn-danger">Delete</button>
+                &nbsp;
+                <a routerLink="/edituser/{{u.id}}">
+                    <button class="btn btn-primary">Edit</button>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+<div class="d-flex flex-column" style="gap:20px;">
+    <div class="card d-flex flex-row" *ngFor="let u of users" style="height: 25vh; width: 85vw; gap:20px;">
+        <div [routerLink]="['/readblog', {'id': u.id}]" class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img src={{u.url}} class="img-fluid" style="height: 25vh;" />
+            <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+        </div>
+        <div [routerLink]="['/readblog', {'id': u.id}]" class="card-body">
+            <!-- <h5 class="card-title">{{u.id}}</h5> -->
+            <h2 class="card-title">{{u.title}}</h2>
+            <!-- <a routerLink="readblog">Read</a> -->
+            <p class="card-desc">{{u.desc}}</p>
+            
+            <div class="d-flex flex-column" style="gap:5px;">
+                <div class="d-flex flex-row " style=" gap:10px; align-items: center;">
+                    
+                    <img src={{u.profile_pic}} class="profile_pic_card rounded-circle" style="height: 4vh; width: 4vh;" />
+                    <div class="card-name" style="font-weight:bold; color: #848181;">{{u.name}}</div>
+                </div>
+
+                <p class="card-date" style="color: #848181;">{{u.date}}</p>
+            </div>
+        
+</div>

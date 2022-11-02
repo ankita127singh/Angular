@@ -1,0 +1,70 @@
+<div class="row">
+    <h1>Add Blog</h1>
+    <div class="col-md-6">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Id</label>
+                <input type="text" class="form-control" formControlName="id" [ngClass]="{'is-invalid':submitted 
+                && form['id'].errors}" [(ngModel)]="user.id">
+
+                <div *ngIf="submitted && 
+                form['id'].errors" class="invalid-feedback">
+                    Id cannot be empty
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="name" [ngClass]="{'is-invalid':submitted && form['name'].errors}" [(ngModel)]="user.name">
+
+                <div *ngIf="submitted && form['name'].errors" class="invalid-feedback">
+                    Name cannot be empty
+                </div>
+            </div>
+            <div class="form-group">
+                <label>url</label>
+                <input type="url" class="form-control" formControlName="url" [ngClass]="{'is-invalid':submitted && form['url'].errors}" [(ngModel)]="user.url">
+
+                <div *ngIf="submitted && form['url'].errors" class="invalid-feedback">
+                    <div *ngIf="form['url'].errors['required']">
+                        url cannot be Empty
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>desc</label>
+                <input type="desc" class="form-control" formControlName="desc" [ngClass]="{'is-invalid':submitted && form['desc'].errors}" [(ngModel)]="user.desc">
+
+                <div *ngIf="submitted && form['desc'].errors" class="invalid-feedback">
+                    <div *ngIf="form['desc'].errors['required']">
+                        description cannot be Empty
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>title</label>
+                <input type="text" class="form-control" formControlName="title" [ngClass]="{'is-invalid':submitted 
+                && form['title'].errors}" [(ngModel)]="user.title">
+
+                <div *ngIf="submitted && form['title'].errors" class="invalid-feedback">
+                    title cannot be empty
+                </div>
+            </div>
+            
+            
+            <div class="form-group">
+                <label>Profile Pic</label>
+                <input type="text" class="form-control" formControlName="profile_pic" [ngClass]="{'is-invalid':submitted 
+                && form['id'].errors}" [(ngModel)]="user.profile_pic">
+
+                <div *ngIf="submitted && 
+                form['id'].errors" class="invalid-feedback">
+                    Id cannot be empty
+                </div>
+            </div>
+            
+            <br>
+            <button class="btn btn-primary">
+                Submit</button>
+        </form>
+    </div>
+</div>
